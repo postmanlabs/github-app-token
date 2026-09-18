@@ -10,6 +10,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
       - uses: dylanvann/publish-github-action@v1.1.49
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
